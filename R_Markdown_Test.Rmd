@@ -1,0 +1,35 @@
+---
+title: "Test"
+author: "Flavia"
+date: "21/01/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# First R MarkDown
+
+## This is a Subheading
+
+### This is the code for Basic ridgeline plot
+
+
+```{r}
+# library
+library(ggridges)
+library(ggplot2)
+ 
+# Diamonds dataset is provided by R natively
+#head(diamonds)
+ 
+# basic example
+ggplot(diamonds, aes(x = price, y = cut, fill = cut)) +
+  geom_density_ridges() +
+  theme_ridges() + 
+  theme(legend.position = "none")
+
+```
+
+
